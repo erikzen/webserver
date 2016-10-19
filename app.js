@@ -11,7 +11,8 @@ let fs = require('fs');
 
 let options = {
     cert: fs.readFileSync('/home/erik/Documents/cert.crt'),
-    key: fs.readFileSync('/home/erik/Documents/key.pem')
+    key: fs.readFileSync('/home/erik/Documents/key.pem'),
+    ca: fs.readFileSync('/home/erik/Documents/bundle.crt')
 };
 
 app.use(express.static('./'));
